@@ -1,0 +1,2 @@
+/usr/bin/ar qc libuincampus_core.a CMakeFiles/uincampus_core.dir/src/version.cpp.o
+/usr/bin/ranlib libuincampus_core.a
