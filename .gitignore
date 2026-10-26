@@ -1,0 +1,11 @@
+# Dossiers de compilation et de cache
+build/
+.cache/
+
+# Fichiers de configuration IDE et compilation locale
+compile_commands.json
+
+# Binaires et exécutables
+*.o
+*.out
+*.exe

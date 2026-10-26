@@ -1,4 +1,0 @@
-/home/abdel/Documents/codex/Programmation/uin‐campus/build/debug/CMakeFiles/uincampus_core.dir
-/home/abdel/Documents/codex/Programmation/uin‐campus/build/debug/CMakeFiles/uin_campus.dir
-/home/abdel/Documents/codex/Programmation/uin‐campus/build/debug/CMakeFiles/edit_cache.dir
-/home/abdel/Documents/codex/Programmation/uin‐campus/build/debug/CMakeFiles/rebuild_cache.dir
