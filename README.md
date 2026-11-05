@@ -13,6 +13,19 @@
 - 🧪 **Tests unitaires** : Découpage prêt pour l'intégration de tests automatiques.
 
 ---
+## construction
+configuration et compilation avec le presset `debug` (sanitizers Asan et UBsan
+actives ):
+
+```bash
+cmake --preset debug
+cmake --build --preset debug
+```
+Exécution:
+
+```bash
+./build/debug/uin-campus
+```
 
 ## 📁 Structure du projet
 
