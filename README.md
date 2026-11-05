@@ -5,15 +5,15 @@
 
 ---
 
-## 🚀 Fonctionnalités principales
+## Fonctionnalités principales
 
-- 🛠️ **Architecture C++23 moderne** : Utilisation des fonctionnalités récentes du langage.
-- ⚙️ **Build modulaire avec CMake** : Structure propre séparant l'application, les bibliothèques et les tests.
-- 🎨 **Qualité de code garantie** : Intégration de `.clang-format` (style de code) et `.clang-tidy` (analyse statique et détection de bugs).
-- 🧪 **Tests unitaires** : Découpage prêt pour l'intégration de tests automatiques.
+-  **Architecture C++23 moderne** : Utilisation des fonctionnalités récentes du langage.
+-  **Build modulaire avec CMake** : Structure propre séparant l'application, les bibliothèques et les tests.
+-  **Qualité de code garantie** : Intégration de `.clang-format` (style de code) et `.clang-tidy` (analyse statique et détection de bugs).
+-  **Tests unitaires** : Découpage prêt pour l'intégration de tests automatiques.
 
 ---
-Environnement
+## Environnement
 Système : Ubuntu 26.04.1 LTS
 
 Versions des outils relevées :
