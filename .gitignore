@@ -1,7 +1,7 @@
 
 # Répertoires de construction
 build/
-cmake‐build‐*/
+cmake_build*/
 out/
 
 # Fichiers générés

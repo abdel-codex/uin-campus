@@ -1,11 +1,11 @@
-BasedOnStyle: LLVM
+asedOnStyle: LLVM
 IndentWidth: 4
 ColumnLimit: 100
 PointerAlignment: Left
 BreakBeforeBraces: Custom
 BraceWrapping:
-AfterFunction: true
-AfterClass: false
-AfterStruct: false
-AfterControlStatement: Never
+  AfterFunction: true
+  AfterClass: false
+  AfterStruct: false
+  AfterControlStatement: Never
 AllowShortFunctionsOnASingleLine: Inline
