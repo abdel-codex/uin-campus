@@ -47,12 +47,14 @@ Exécution:
 ## 📁 Structure du projet
 
 ```text
-uin-campus/
-├── app/                  # Point d'entrée principal (main.cpp)
-├── include/              # Fichiers d'en-tête (.hpp)
-├── src/                  # Fichiers sources (.cpp)
-├── tests/                # Tests unitaires
-├── .clang-format         # Configuration du formatage automatique
-├── .clang-tidy           # Configuration des règles d'analyse statique
-├── .gitignore            # Fichiers et dossiers ignorés par Git
-└── CMakeLists.txt        # Fichier de configuration CMake principal
+uin‐campus/
+├── include/uincampus/
+│ ├── version.hpp│
+| ├── regles.hpp ← nouveau
+│ └── saisie.hpp ← nouveau
+├── src/
+│ ├── version.cpp│
+| ├── regles.cpp
+│ └── saisie.cpp ← nouveau
+└── app/
+└── main.cpp
