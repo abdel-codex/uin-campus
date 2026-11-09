@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 # 🎓 UIN-Campus
+=======
+# UIN-Campus
+>>>>>>> c998bf7 (feat: implement version function)
 
 **UIN-Campus** est une application développée en C++23 conçue pour la gestion académique (étudiants, unités d'enseignement, notes). Ce projet sert de socle pour appliquer les meilleures pratiques de développement logiciel moderne avec CMake, Git et l'analyse statique de code.
 
@@ -35,6 +39,7 @@ configuration et compilation avec le presset `debug` (sanitizers Asan et UBsan
 actives ):
 
 ```bash
+<<<<<<< HEAD
 cmake --preset debug
 cmake --build --preset debug
 ```
@@ -43,10 +48,24 @@ Exécution:
 ```bash
 ./build/debug/uin-campus
 ```
+=======
+Construire et exécuter
+Version de développement (avec AddressSanitizer et UBSan) :
+
+cmake --preset debug
+cmake --build --preset debug
+./build/debug/uin-campus
+```
+## Résultat attendu :
+
+UIN-Campus — Système de gestion académique
+Version 0.1.0
+>>>>>>> c998bf7 (feat: implement version function)
 
 ## 📁 Structure du projet
 
 ```text
+<<<<<<< HEAD
 uin‐campus/
 ├── include/uincampus/
 │ ├── version.hpp│
@@ -58,3 +77,15 @@ uin‐campus/
 │ └── saisie.cpp ← nouveau
 └── app/
 └── main.cpp
+=======
+uin-campus/
+├── CMakeLists.txt        description de la construction
+├── CMakePresets.json     configurations debug et release
+├── .clang-format         règles de mise en forme du code
+├── .clang-tidy           règles d'analyse du code
+├── .gitignore            fichiers ignorés par Git
+├── include/uincampus/    en-têtes (.hpp)
+├── src/                  implémentations (.cpp)
+├── app/                  programme principal (main.cpp)
+└── tests/                tests unitaires (à venir)
+>>>>>>> c998bf7 (feat: implement version function)
