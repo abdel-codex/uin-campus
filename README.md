@@ -56,7 +56,7 @@ UIN-Campus — Système de gestion académique
 Version 0.1.0
 
 ## 📁 Structure du projet
-
+``
 uin‐campus/
 ├── include/uincampus/
 │ ├── version.hpp│
@@ -68,3 +68,4 @@ uin‐campus/
 │ └── saisie.cpp ← nouveau
 └── app/
 └── main.cpp
+``
