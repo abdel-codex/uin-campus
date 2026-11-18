@@ -35,8 +35,6 @@ configuration et compilation avec le presset `debug` (sanitizers Asan et UBsan
 actives ):
 
 ```bash
-HEAD
->>>>>>> 90af0b6 (Restructurer le projet CMake et générer la configuration)
 cmake --preset debug
 cmake --build --preset debug
 ```
