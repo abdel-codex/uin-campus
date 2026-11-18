@@ -1,31 +1,50 @@
-#include "uincampus/regles.hpp"
-#include "uincampus/saisie.hpp"
-#include "uincampus/version.hpp"
+#include "uincampus.hpp"
+#include <cstdlib>
 #include <format>
 #include <print>
+#include <span>
 #include <string>
+#include <string_view>
 #include <vector>
-int main() {
-  std::println("UIN_Campus {} — Calcul de la moyenne d'un étudiant\n",
-               uin::version());
-  const std::string nom = uin::lireTexte("Nom de l'étudiant : ");
-  const int nbNotes = uin::lireEntier("Nombre de notes (1 à 30) : ", 1, 30);
-  std::vector<double> notes;
-  for (int i{1}; i <= nbNotes; ++i) {
-    notes.push_back(uin::lireNote(std::format(" Note {} : ", i)));
+
+namespace {
+
+enum class Suite { Continuer, Terminer, Erreur };
+
+void afficherAide() {
+  std::println("Usage : uin-campus [--version] [--aide]");
+  std::println(
+      "  --version : Affiche la version et les informations de construction");
+  std::println("  --aide : Affiche cette aide");
+}
+
+[[nodiscard]] Suite traiterOptions(std::span<char *> arguments) {
+  if (arguments.size() <= 1) {
+    return Suite::Continuer;
   }
-  double somme{0.0};
-  for (double n : notes) {
-    somme += n;
+  for (const std::string_view option : arguments.subspan(1)) {
+    if (option == "--version") {
+      std::println("{}", uin::informationsConstruction());
+      return Suite::Terminer;
+    }
+    if (option == "--aide") {
+      afficherAide();
+      return Suite::Terminer;
+    }
+    std::println(stderr, "Option inconnue : {}", option);
+    afficherAide();
+    return Suite::Erreur;
   }
-  const double moyenne = somme / static_cast<double>(notes.size());
-  const uin::Mention mention = uin::mentionPour(moyenne);
-  std::println("\n{:<40}", "");
-  std::println("{:<20}{:>20}", "Étudiant", nom);
-  std::println("{:<20}{:>20}", "Nombre de notes", notes.size());
-  std::println("{:<20}{:>20.2f}", "Moyenne", moyenne);
-  std::println("{:<20}{:>20}", "Mention", uin::libelle(mention));
-  std::println("{:<20}{:>20}", "Décision",
-               moyenne >= uin::seuilValidation ? "Validé" : "Non validé");
-  std::println("{:<40}", "");
+  return Suite::Continuer;
+}
+
+} // namespace
+
+int main(int argc, char *argv[]) {
+  std::vector<char *> arguments(argv, argv + argc);
+  Suite resultat = traiterOptions(arguments);
+  if (resultat == Suite::Erreur) {
+    return 1;
+  }
+  return 0;
 }

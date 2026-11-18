@@ -1,5 +1,5 @@
 
-#  UIN-Campus
+# UIN-Campus
 
 **UIN-Campus** est une application développée en C++23 conçue pour la gestion académique (étudiants, unités d'enseignement, notes). Ce projet sert de socle pour appliquer les meilleures pratiques de développement logiciel moderne avec CMake, Git et l'analyse statique de code.
 
@@ -35,6 +35,8 @@ configuration et compilation avec le presset `debug` (sanitizers Asan et UBsan
 actives ):
 
 ```bash
+HEAD
+>>>>>>> 90af0b6 (Restructurer le projet CMake et générer la configuration)
 cmake --preset debug
 cmake --build --preset debug
 ```
@@ -43,29 +45,70 @@ Exécution:
 ```bash
 ./build/debug/uin-campus
 ```
-Construire et exécuter
-Version de développement (avec AddressSanitizer et UBSan) :
 
+```bash
+##Construire, tester, installer, versionner
+
+rm -rf build
 cmake --preset debug
 cmake --build --preset debug
 ./build/debug/uin-campus
-
+```
 ## Résultat attendu :
 
 UIN-Campus — Système de gestion académique
 Version 0.1.0
 
+```bash
+./build/debug/app/uin-campus --version
+
+```
+## our le chemin dans .vscode/launch.json . Exemple de sortie ::
+```
+UINCampus 0.1.0 — GCC 14.2.0 — C++ (202302) — Debug
+```
+```bash
+##Installation locale de la version Release
+cmake --preset release
+cmake --build --preset release
+cmake --install build/release --prefix ~/.local
+~/.local/bin/uin-campus --version
+
+```
+
 ## 📁 Structure du projet
-``
-uin‐campus/
+
+```text
+uin-campus/
+├── CMakeLists.txt
+├── CMakePresets.json
 ├── include/uincampus/
-│ ├── version.hpp│
-| ├── regles.hpp ← nouveau
-│ └── saisie.hpp ← nouveau
+    │
+    ├── uincampus.hpp
+    │
+    ├── version.hpp
+    │
+    ├── regles.hpp
+    │
+    ├── saisie.hpp
+    │
+    └── calculs.hpp
 ├── src/
-│ ├── version.cpp│
-| ├── regles.cpp
-│ └── saisie.cpp ← nouveau
-└── app/
-└── main.cpp
-``
+    │
+    ├── CMakeLists.txt
+    │
+    ├── config.hpp.in
+    │
+    ├── version.cpp
+    │
+    ├── regles.cpp
+    │
+    ├── saisie.cpp
+    │
+    └── calculs.cpp
+    ├── app/
+    │
+    ├── CMakeLists.txt
+    │
+    └── main.cpp
+    └── tests/
