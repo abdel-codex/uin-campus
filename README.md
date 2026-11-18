@@ -1,8 +1,8 @@
 
 # UIN-Campus
+Système de gestion académique de l'Université Islamique du Niger (UIN). Projet fil rouge du cours de Programmation Orientée Objet en C++ moderne.
 
-**UIN-Campus** est une application développée en C++23 conçue pour la gestion académique (étudiants, unités d'enseignement, notes). Ce projet sert de socle pour appliquer les meilleures pratiques de développement logiciel moderne avec CMake, Git et l'analyse statique de code.
-
+**UIN-Campus** est une application développée en C++23 conçue pour Système de gestion académique de l'Université Islamique du Niger (UIN). Projet fil rouge du cours de Programmation Orientée Objet en C++ moderne.
 ---
 
 ## Fonctionnalités principales
