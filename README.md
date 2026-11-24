@@ -1,7 +1,7 @@
 # UIN-Campus
-Système de gestion académique de l'Université Islamique du Niger (UIN). Projet fil rouge du cours de Programmation Orientée Objet en C++ moderne.
 
-**UIN-Campus** est une application développée en C++23 conçue pour Système de gestion académique de l'Université Islamique du Niger (UIN). Projet fil rouge du cours de Programmation Orientée Objet en C++ moderne.
+**UIN-Campus** est une application développée en C++23 conçue pour la gestion académique (étudiants, unités d'enseignement, notes). Ce projet sert de socle pour appliquer les meilleures pratiques de développement logiciel moderne avec CMake, Git et l'analyse statique de code.
+
 ---
 
 ## Fonctionnalités principales
@@ -15,10 +15,10 @@ Système de gestion académique de l'Université Islamique du Niger (UIN). Proje
 
 ## Environnement
 
-- **Système** : Ubuntu 26.04.1 LTS
-- **Norme utilisée** : C++23
+Système : Ubuntu 26.04.1 LTS
 
-**Versions des outils relevées :**
+Versions des outils relevées :
+
 - `g++` (Ubuntu 15.2.0-16ubuntu1) 15.2.0
 - `clang` version 21.1.8 (6ubuntu1)
 - `cmake` version 4.2.3
@@ -26,7 +26,9 @@ Système de gestion académique de l'Université Islamique du Niger (UIN). Proje
 - `gdb` (Ubuntu 17.1-2ubuntu1) 17.1
 - `git` version 2.53.0
 
-**Prérequis :**
+Norme utilisée : C++23.
+
+Prérequis :
 ```bash
 sudo apt install build-essential clang clangd clang-format clang-tidy lldb gdb \
     cmake ninja-build valgrind cppcheck git
@@ -61,9 +63,31 @@ cmake --build --preset debug
 ### Résultat attendu :
 
 ```text
-UIN-Campus — Système de gestion académique
-Version 0.1.0
-```
+UIN-Campus 0.1.0 — Relevé d'un étudiant
+
+Nom de l'étudiant : Abdel Rahim
+Nombre d'UE (1 à 30) : 5
+  Note de l'UE 1 : 19
+  Coefficient de l'UE 1 : 8
+  Note de l'UE 2 : 19
+  Coefficient de l'UE 2 : 9
+  Note de l'UE 3 : 19
+  Coefficient de l'UE 3 : 9
+  Note de l'UE 4 : 19
+  Coefficient de l'UE 4 : 9
+  Note de l'UE 5 : 20
+  Coefficient de l'UE 5 : 9
+
+---------------------------------------------
+Étudiant                                Abdel Rahim
+Moyenne pondérée                              19.20
+Moyenne simple                                19.20
+Note min / max                        19.00 / 20.00
+Écart-type                                     0.40
+UE validées                                   5 / 5
+Mention                                   Très bien
+---------------------------------------------
+```[cite: 5]
 
 ```bash
 ./build/debug/app/uin-campus --version
@@ -92,14 +116,12 @@ cmake --install build/release --prefix ~/.local
 uin-campus/
 ├── CMakeLists.txt
 ├── CMakePresets.json
-├── README.md
-├── include/
-│   └── uincampus/
-│       ├── uincampus.hpp
-│       ├── version.hpp
-│       ├── regles.hpp
-│       ├── saisie.hpp
-│       └── calculs.hpp
+├── include/uincampus/
+│   ├── uincampus.hpp
+│   ├── version.hpp
+│   ├── regles.hpp
+│   ├── saisie.hpp
+│   └── calculs.hpp
 ├── src/
 │   ├── CMakeLists.txt
 │   ├── config.hpp.in
@@ -112,4 +134,3 @@ uin-campus/
 │   └── main.cpp
 └── test/
 ```
-
