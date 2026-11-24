@@ -1,11 +1,12 @@
-#include "uincampus.hpp"
+#include "uincampus/uincampus.hpp"
+#include <vector>
 #include <cstdlib>
 #include <format>
 #include <print>
 #include <span>
 #include <string>
 #include <string_view>
-#include <vector>
+
 
 namespace {
 
@@ -13,8 +14,7 @@ enum class Suite { Continuer, Terminer, Erreur };
 
 void afficherAide() {
   std::println("Usage : uin-campus [--version] [--aide]");
-  std::println(
-      "  --version : Affiche la version et les informations de construction");
+  std::println( "  --version : Affiche la version et les informations de construction");
   std::println("  --aide : Affiche cette aide");
 }
 
